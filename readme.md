@@ -4,7 +4,7 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/lrseda">
     <img src="" alt="" width="130" height="100">
   </a>
 <!-- * Title Section -->
@@ -19,7 +19,7 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 <br/>
 
-![](https://visit-counter.vercel.app/counter.png?page=lrseda/AD-CI4-Coffeshop)
+![](https://visit-counter.vercel.app/counter.png?page=lrseda/AD-CI4-Coffeshop2)
 
 <!-- ! Make sure it was similar to your github -->
 
