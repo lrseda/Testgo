@@ -47,6 +47,7 @@
             padding: 3rem 2rem;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .page-header h1 {
@@ -65,6 +66,25 @@
             color: var(--gray-color);
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateX(-2px);
         }
 
         .section {
