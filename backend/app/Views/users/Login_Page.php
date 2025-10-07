@@ -49,6 +49,27 @@
             min-height: 600px;
         }
 
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--white);
+            font-weight: 500;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 14px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-3px);
+        }
+
+
         .login-visual {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
@@ -381,6 +402,7 @@
     <div class="login-container">
         <!-- Visual Side -->
         <div class="login-visual">
+            <a href="home.html" class="back-button">← Back</a>
             <div class="visual-icon">☕</div>
             <div class="visual-content">
                 <h2>Welcome Back!</h2>
