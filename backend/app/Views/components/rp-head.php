@@ -61,6 +61,25 @@
             font-size: 1.1rem;
         }
 
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateX(-2px);
+        }
+
         .filter-section {
             display: flex;
             justify-content: space-between;
