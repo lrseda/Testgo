@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadmap - Claude AI</title>
+    <title>Roadmap</title>
     <style>
         * {
             margin: 0;
