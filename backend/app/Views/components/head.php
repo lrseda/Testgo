@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude - AI Assistant Landing Page</title>
+    <title>Landing Page</title>
     <style>
         * {
             margin: 0;
