@@ -37,7 +37,7 @@
 
             <?= view('components/lg-social-buttons') ?>
 
-            <?= view('components/footer') ?>
+            <?= view('components/lg-footer') ?>
         </div>
     </div>
 
