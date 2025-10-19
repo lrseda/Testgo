@@ -11,4 +11,7 @@ class Users extends BaseController
     {
         return view('users/Landing_Page');
     }
+
+    
+
 }
