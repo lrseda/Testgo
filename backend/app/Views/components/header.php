@@ -7,8 +7,8 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="<?= ('Login') ?>">Login</a></li>
+                <li><a href="<?= ('Signup') ?>">Sign Up</a></li>
             </ul>
         </nav>
     </header>
