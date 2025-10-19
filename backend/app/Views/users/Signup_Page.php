@@ -27,7 +27,7 @@
 
         <!-- Visual Side -->
         <div class="signup-visual">
-            <a href="<?= ('Landing') ?>" class="back-button">Back →</a>
+            <a href="<?= ('Landing') ?>" class="back-button">Back</a>
             <div class="visual-icon">☕︎</div>
             <div class="visual-content">
                 <h2>Signup Page</h2>
