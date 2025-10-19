@@ -5,7 +5,7 @@
     <div class="login-container">
         <!-- Visual Side -->
         <div class="login-visual">
-            <a href="home.html" class="back-button">← Back</a>
+            <a href="<?= ('Landing') ?>" class="back-button">Back</a>
             <div class="visual-icon">☕</div>
             <div class="visual-content">
                 <h2>Welcome Back!</h2>
