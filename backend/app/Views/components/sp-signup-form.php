@@ -1,28 +1,55 @@
 <!-- Signup Form -->
-            <form id="signupForm">
+            <form id="signupForm" action="/register" method="post" novalidate>
                 <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required>
-                        <div class="field-validation" id="firstNameError">First name is required</div>
-                    </div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" 
+                        id="firstName" 
+                        name="firstName" 
+                        class="form-input <?= isset($errors['firstName']) ? 'error' : '' ?>" 
+                        placeholder="Enter your first name" 
+                        value="<?= esc($old['firstName'] ?? '') ?>" 
+                        required>
+                    <?php if (!empty($errors['firstName'])): ?>
+                        <p class="error-message"><?= esc($errors['firstName']) ?></p>
+                    <?php endif; ?>
+                    
                     <div class="form-group">
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter your last name" required>
-                        <div class="field-validation" id="lastNameError">Last name is required</div>
+                        <input type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            class="form-input <?= isset($errors['lastName']) ? 'error' : '' ?>" 
+                            placeholder="Enter your last name" 
+                            value="<?= esc($old['lastName'] ?? '') ?>" 
+                            required>
+                        <?php if (!empty($errors['lastName'])): ?>
+                            <p class="error-message"><?= esc($errors['lastName']) ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
+                    <input type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input <?= isset($errors['email']) ? 'error' : '' ?>" 
+                        placeholder="Enter your email address" 
+                        value="<?= esc($old['email'] ?? '') ?>" 
+                        required>
                     <div class="field-validation" id="emailError">Please enter a valid email address</div>
                     <div class="field-validation success" id="emailSuccess">Email is available</div>
                 </div>
 
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" class="form-input" placeholder="Choose a username" required>
+                    <input type="text" 
+                        id="username" 
+                        name="username" 
+                        class="form-input <?= isset($errors['username']) ? 'error' : '' ?>" 
+                        placeholder="Choose a username" 
+                        value="<?= esc($old['username'] ?? '') ?>" 
+                        required>
                     <div class="field-validation" id="usernameError">Username must be at least 3 characters</div>
                     <div class="field-validation success" id="usernameSuccess">Username is available</div>
                 </div>
