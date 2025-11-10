@@ -20,6 +20,11 @@
                 <p>Enter your credentials to access your account</p>
             </div>
 
+            <?php
+                $errors = session()->getFlashdata('errors') ?? [];
+                $old = session()->getFlashdata('old') ?? [];
+            ?>
+
             <!-- Messages -->
             <div class="error-message" id="errorMessage">
                 Invalid email or password. Please try again.
@@ -29,9 +34,8 @@
             </div>
 
             <!-- Login Form -->
-            <form id="loginForm">
+            <form class="space-y-6 mt-8" action="/login" method="post" novalidate>
                 <?= view('components/login-form') ?>
-
                 <?= view('components/lg-login-button') ?>
             </form>
 
@@ -55,45 +59,45 @@
             }
         }
 
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // document.getElementById('loginForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            const button = document.getElementById('loginButton');
-            const buttonText = document.getElementById('buttonText');
-            const loading = document.getElementById('loading');
-            const errorMessage = document.getElementById('errorMessage');
-            const successMessage = document.getElementById('successMessage');
+        //     const button = document.getElementById('loginButton');
+        //     const buttonText = document.getElementById('buttonText');
+        //     const loading = document.getElementById('loading');
+        //     const errorMessage = document.getElementById('errorMessage');
+        //     const successMessage = document.getElementById('successMessage');
             
-            // Hide messages
-            errorMessage.style.display = 'none';
-            successMessage.style.display = 'none';
+        //     // Hide messages
+        //     errorMessage.style.display = 'none';
+        //     successMessage.style.display = 'none';
             
-            // Show loading state
-            button.disabled = true;
-            loading.style.display = 'inline-block';
-            buttonText.textContent = 'Signing In...';
+        //     // Show loading state
+        //     button.disabled = true;
+        //     loading.style.display = 'inline-block';
+        //     buttonText.textContent = 'Signing In...';
             
-            // Simulate API call
-            setTimeout(() => {
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
+        //     // Simulate API call
+        //     setTimeout(() => {
+        //         const email = document.getElementById('email').value;
+        //         const password = document.getElementById('password').value;
                 
-                // Simple validation for demo
-                if (email === 'admin@claude.ai' && password === 'password123') {
-                    successMessage.style.display = 'block';
-                    buttonText.textContent = 'Success!';
+        //         // Simple validation for demo
+        //         if (email === 'admin@claude.ai' && password === 'password123') {
+        //             successMessage.style.display = 'block';
+        //             buttonText.textContent = 'Success!';
                     
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 1500);
-                } else {
-                    errorMessage.style.display = 'block';
-                    button.disabled = false;
-                    loading.style.display = 'none';
-                    buttonText.textContent = 'Sign In';
-                }
-            }, 2000);
-        });
+        //             setTimeout(() => {
+        //                 window.location.href = 'index.html';
+        //             }, 1500);
+        //         } else {
+        //             errorMessage.style.display = 'block';
+        //             button.disabled = false;
+        //             loading.style.display = 'none';
+        //             buttonText.textContent = 'Sign In';
+        //         }
+        //     }, 2000);
+        // });
 
         // Real-time validation
         document.getElementById('email').addEventListener('blur', function() {
