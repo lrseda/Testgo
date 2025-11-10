@@ -18,6 +18,12 @@
                 Account created successfully! Please check your email to verify your account.
             </div>
 
+            <?php
+                $errors = session()->getFlashdata('errors') ?? [];
+                $old = session()->getFlashdata('old') ?? [];
+            ?>
+
+
             <?= view('components/sp-signup-form') ?>
 
             <?= view('components/sp-social-buttons') ?>
